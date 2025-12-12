@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salão Pro</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#9c27b0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login">
+<h2>Login</h2>
+<input id="usuario" placeholder="Usuário">
+<input id="senha" type="password" placeholder="Senha">
+<button onclick="entrar()">Entrar</button>
+</section>
+
+<section id="app" style="display:none">
+<h1>Salão Pro</h1>
+<nav>
+<button onclick="mostrar('agenda')">Agenda</button>
+<button onclick="mostrar('vendas')">Vendas</button>
+<button onclick="mostrar('produtos')">Produtos</button>
+<button onclick="mostrar('servicos')">Serviços</button>
+<button onclick="mostrar('clientes')">Clientes</button>
+<button onclick="mostrar('caixa')">Caixa</button>
+<button onclick="mostrar('relatorios')">Relatórios</button>
+<button onclick="mostrar('backup')">Backup</button>
+</nav>
+
+<section id="agenda" class="tela">
+<h2>Agenda</h2>
+<input id="agData" type="date">
+<select id="agCliente"></select>
+<select id="agServico"></select>
+<button onclick="addAgenda()">Agendar</button>
+<ul id="listaAgenda"></ul>
+</section>
+
+<section id="vendas" class="tela">
+<h2>Venda</h2>
+<select id="vCliente"></select>
+<select id="vProduto"></select>
+<select id="vServico"></select>
+<select id="vPagamento">
+<option>Pix</option>
+<option>Dinheiro</option>
+<option>Cartão</option>
+</select>
+<button onclick="finalizarVenda()">Finalizar</button>
+</section>
+
+<section id="produtos" class="tela">
+<h2>Produtos</h2>
+<input id="pNome" placeholder="Nome">
+<input id="pQtd" type="number" placeholder="Qtd">
+<input id="pPreco" type="number" placeholder="Preço">
+<button onclick="addProduto()">Salvar</button>
+<ul id="listaProdutos"></ul>
+</section>
+
+<section id="servicos" class="tela">
+<h2>Serviços</h2>
+<input id="sNome" placeholder="Nome">
+<input id="sPreco" type="number" placeholder="Preço">
+<button onclick="addServico()">Salvar</button>
+<ul id="listaServicos"></ul>
+</section>
+
+<section id="clientes" class="tela">
+<h2>Clientes</h2>
+<input id="cNome" placeholder="Nome">
+<button onclick="addCliente()">Salvar</button>
+<ul id="listaClientes"></ul>
+</section>
+
+<section id="caixa" class="tela">
+<h2>Caixa</h2>
+<p id="saldo"></p>
+<ul id="listaCaixa"></ul>
+</section>
+
+<section id="relatorios" class="tela">
+<h2>Relatórios</h2>
+<p id="relDia"></p>
+<p id="relMes"></p>
+<p id="relPag"></p>
+</section>
+
+<section id="backup" class="tela">
+<h2>Backup</h2>
+<button onclick="exportar()">Exportar</button>
+<input type="file" onchange="importar(this)">
+</section>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

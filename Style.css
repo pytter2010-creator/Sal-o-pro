@@ -1,0 +1,8 @@
+body{font-family:Arial;background:#f3f3f3;padding:10px}
+h1,h2{text-align:center;color:#9c27b0}
+nav{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
+button{background:#9c27b0;color:#fff;border:none;padding:8px;border-radius:8px}
+input,select{width:100%;margin:4px 0;padding:6px}
+.tela{display:none;background:#fff;padding:10px;border-radius:10px;margin-top:10px}
+ul{list-style:none;padding:0}
+li{background:#eee;margin:3px 0;padding:6px;border-radius:6px}

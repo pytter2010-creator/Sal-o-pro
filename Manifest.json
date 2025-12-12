@@ -1,0 +1,9 @@
+{
+"name":"Salão Pro",
+"short_name":"Salão",
+"start_url":"index.html",
+"display":"standalone",
+"theme_color":"#9c27b0",
+"background_color":"#ffffff",
+"icons":[{"src":"icon.png","sizes":"512x512","type":"image/png"}]
+}
